@@ -1,0 +1,184 @@
+import 'package:flutter/material.dart';
+import 'package:kedai_nusantara/constants.dart';
+
+class NotifToko extends StatefulWidget {
+  const NotifToko({Key? key}) : super(key: key);
+
+  @override
+  _NotifTokoState createState() => _NotifTokoState();
+}
+
+class _NotifTokoState extends State<NotifToko> {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      // appBar: AppBar(
+      //   title: Text("Notif Toko"),
+      // ),
+      body: ListView(
+        children: const [
+          // Row(),
+          SizedBox(height: 20),
+          NotifBox(
+            caption: 'Belum ada notifikasi',
+            fotoProfil: 'assets/images/toko1.png',
+            judul: 'Status Pesanan',
+            waktu: '3 Jam yang lalu',
+          ),
+          // SizedBox(height: 5),
+          NotifBox(
+            caption: 'Belum ada notifikasi',
+            fotoProfil: 'assets/images/toko2.png',
+            judul: 'Salgo Penjualan',
+            waktu: '1 Hari yang lalu',
+          ),
+          // SizedBox(height: 5),
+          NotifBox(
+            caption: 'Belum ada notifikasi',
+            fotoProfil: 'assets/images/toko3.png',
+            judul: 'Promosi Toko',
+            waktu: '1 Hari yang lalu',
+          ),
+          SizedBox(height: 20),
+        ],
+      ),
+    );
+  }
+}
+
+class NotifBox extends StatelessWidget {
+  const NotifBox({
+    Key? key,
+    required this.fotoProfil,
+    required this.judul,
+    required this.caption,
+    required this.waktu,
+  }) : super(key: key);
+
+  final String fotoProfil, judul, caption, waktu;
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 20.0, vertical: 5.0),
+      child: Container(
+        width: double.infinity,
+        // height: 470.0,
+        decoration: BoxDecoration(
+          color: Colors.white,
+          borderRadius: BorderRadius.circular(5.0),
+          boxShadow: const [
+            BoxShadow(
+              color: Colors.black45,
+              // offset: Offset(5, 5),
+              blurRadius: 3.3,
+            ),
+          ],
+        ),
+        child: Column(
+          children: [
+            Padding(
+              padding: const EdgeInsets.symmetric(vertical: 10.0),
+              child: Column(
+                children: [
+                  ListTile(
+                    leading: Container(
+                      // width: 50.0,
+                      // height: 50.0,
+                      decoration: const BoxDecoration(
+                          // shape: BoxShape.rectangle,
+                          // boxShadow: [
+                          //   BoxShadow(
+                          //     color: Colors.black45,
+                          //     offset: Offset(0, 2),
+                          //     blurRadius: 6.0,
+                          //   ),
+                          // ],
+                          ),
+                      child: Image(
+                        height: 50.0,
+                        width: 50.0,
+                        image: AssetImage(fotoProfil),
+                        fit: BoxFit.cover,
+                        // color: Colors.black,
+                      ),
+                      // child: CircleAvatar(
+                      //   child: ClipRect(
+
+                      //   ),
+                      // ),
+                    ),
+                    title: Text(
+                      judul,
+                      style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        color: Palette.bg1,
+                        fontSize: 15,
+                      ),
+                    ),
+                    subtitle: Text(
+                      caption,
+                      style: const TextStyle(
+                          color: Colors.black54,
+                          fontWeight: FontWeight.bold,
+                          fontSize: 11),
+                    ),
+                  ),
+                  // const SizedBox(height: 10),
+                  // Padding(
+                  //   padding: const EdgeInsets.symmetric(horizontal: 80),
+                  //   child: Row(
+                  //     children: [
+                  //       const Icon(
+                  //         (Icons.timer),
+                  //         size: 15,
+                  //       ),
+                  //       Padding(
+                  //         padding: const EdgeInsets.symmetric(horizontal: 5),
+                  //         child: Text(
+                  //           waktu,
+                  //           style: const TextStyle(
+                  //             fontWeight: FontWeight.bold,
+                  //             fontSize: 10,
+                  //           ),
+                  //         ),
+                  //       ),
+                  //     ],
+                  //   ),
+                  // ),
+                  // Padding(
+                  //   padding: const EdgeInsets.only(right: 10, left: 24),
+                  //   child: Text(
+                  //     caption,
+                  //     style: const TextStyle(fontWeight: FontWeight.bold),
+                  //   ),
+                  // ),
+                  // const SizedBox(height: 10),
+                  // Container(
+                  //   margin: const EdgeInsets.all(10.0),
+                  //   width: double.infinity,
+                  //   height: 240.0,
+                  //   decoration: BoxDecoration(
+                  //     borderRadius: BorderRadius.circular(25.0),
+                  //     boxShadow: const [
+                  //       // BoxShadow(
+                  //       //   color: Colors.black45,
+                  //       //   // offset: Offset(0, 5),
+                  //       //   blurRadius: 8.8,
+                  //       // ),
+                  //     ],
+                  //     // image: DecorationImage(
+                  //     //   image: AssetImage(fotoProduk),
+                  //     //   fit: BoxFit.fitWidth,
+                  //     // ),
+                  //   ),
+                  // ),
+                ],
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}

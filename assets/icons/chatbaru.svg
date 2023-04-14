@@ -1,0 +1,10 @@
+<svg width="512" height="512" xmlns="http://www.w3.org/2000/svg">
+ <!-- Created with UXWing SVG Editor - https://uxwing.com/svg-icon-editor/ -->
+ <g>
+  <title>Layer 1</title>
+  <path id="svg_2" d="m238.644822,135.388934c-68.483714,0 -123.999993,51.041292 -123.999993,114.001945c0,21.515481 6.563184,41.615074 17.856602,58.777874l-17.856602,47.989166l49.714878,-15.647112c20.716766,14.300698 46.385041,22.878101 74.285114,22.878101c68.483785,0 124.000028,-51.041346 124.000028,-113.99804c0,-62.960643 -55.516234,-114.001945 -124.000028,-114.001945l0,0.000011z" stroke-width="5" stroke="#ffffff" fill="none"/>
+  <ellipse ry="12" rx="11.5" id="svg_3" cy="252.850003" cx="196" stroke-width="5" fill="#ffffff"/>
+  <ellipse ry="12" rx="11.5" id="svg_4" cy="253.850003" cx="243" stroke-width="5" fill="#ffffff"/>
+  <ellipse ry="12" rx="11.5" id="svg_5" cy="253.850003" cx="288" stroke-width="5" fill="#ffffff"/>
+ </g>
+</svg>
